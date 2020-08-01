@@ -1,6 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Purpose
+This project is setup for learning Purpose
+In this project I learn about rxjs operator and how these will use with react
 
-## Available Scripts
+### Packages used in This
+[rxjs](https://rxjs-dev.firebaseapp.com/guide/overview)
+[React-router-dom](https://www.npmjs.com/package/react-router-dom)
+
+### Available Scripts
 
 In the project directory, you can run:
 
