@@ -4,6 +4,7 @@ import { Switch, Route, Redirect, BrowserRouter, Link } from 'react-router-dom';
 import FormEvent from './FormEvent/FormEvent.component';
 import ofComponent from './OfComponent/of.component';
 import './App.css';
+import  formComponent from './formComponent/form.component';
 
 class App extends React.Component
  {
@@ -11,9 +12,9 @@ class App extends React.Component
      <div className="container-fluid">
           <div className="row">
               <ul className="navbar">
-                <li> <a><Link to= "/first">Form Event</Link> </a> </li>
+                <li> <a><Link to= "/first">From (Click Handler) Event</Link> </a> </li>
                 <li> <a><Link to="/of">of Event</Link> </a> </li>
-                <li> <a><Link to="/">Form Event</Link></a> </li>
+                <li> <a> <Link to="/form">Form Event </Link> </a> </li>
               </ul>
 
           </div>
@@ -30,7 +31,7 @@ class App extends React.Component
            <Switch>
               <Route path = "/first" component = {FormEvent} />
               <Route path="/of" component={ofComponent} />
-              <Route path = "/second" component =  {FormEvent}/>
+              <Route path = "/form" component =  {formComponent}/>
               <Route render = {this.renderHome} />
            </Switch>
            </div>

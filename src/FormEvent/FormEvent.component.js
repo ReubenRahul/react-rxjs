@@ -35,7 +35,7 @@ class FormEvent extends React.Component {
         <div className="col-sm-3">
           <div className="card">
             <div className="card-header">
-              Form Event Handler on Videos
+              From Event Handler on Videos
                   </div>
               <div className="card-body">
                 <button id="fromevent_handler" className="btn btn-primary btn-sm" > Click Here </button>
