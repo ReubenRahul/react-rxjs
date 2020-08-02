@@ -5,6 +5,7 @@ import FormEvent from './FormEvent/FormEvent.component';
 import ofComponent from './OfComponent/of.component';
 import './App.css';
 import  formComponent from './formComponent/form.component';
+import ToArrayComponent from './toArrayComponent/toArray.component';
 
 class App extends React.Component
  {
@@ -13,8 +14,9 @@ class App extends React.Component
           <div className="row">
               <ul className="navbar">
                 <li> <a><Link to= "/first">From (Click Handler) Event</Link> </a> </li>
-                <li> <a><Link to="/of">of Event</Link> </a> </li>
-                <li> <a> <Link to="/form">Form Event </Link> </a> </li>
+                <li> <a><Link to="/of">of Observable</Link> </a> </li>
+                <li> <a> <Link to="/form">From Observable </Link> </a> </li>
+                <li> <a> <Link to="/to-array">To Array </Link> </a> </li>
               </ul>
 
           </div>
@@ -32,6 +34,7 @@ class App extends React.Component
               <Route path = "/first" component = {FormEvent} />
               <Route path="/of" component={ofComponent} />
               <Route path = "/form" component =  {formComponent}/>
+              <Route path = "/to-array" component =  {ToArrayComponent}/>
               <Route render = {this.renderHome} />
            </Switch>
            </div>
