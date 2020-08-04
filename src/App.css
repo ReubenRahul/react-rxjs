@@ -20,3 +20,18 @@ ul.navbar{
   margin:auto;
   margin-top:40px;
 }
+ul.ulContainer li {
+  list-style: none;
+  border: 1px solid #f1efef;
+  padding: 1px;
+  margin: 9px;
+  padding-left: 10px;
+}
+
+ul.success li{
+  color:green !important;
+}
+
+ul.error li{
+  color:red
+}
