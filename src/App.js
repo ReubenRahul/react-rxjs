@@ -7,6 +7,7 @@ import './App.css';
 import  formComponent from './formComponent/form.component';
 import ToArrayComponent from './toArrayComponent/toArray.component';
 import CustomObservableComponent from './customObservable/custom-observable.component';
+import MapOperatorComponent from './MapOperator/MapOperator.component';
 
 class App extends React.Component
  {
@@ -18,7 +19,7 @@ class App extends React.Component
                 <li> <a><Link to="/of">of Observable</Link> </a> </li>
                 <li> <a> <Link to="/form">From Observable </Link> </a> </li>
                 <li> <a> <Link to="/custom-observable">Custom Observable </Link> </a> </li>
-                
+                <li> <a className=""> <Link to="/map-operator">Map operator </Link> </a></li>
               </ul>
 
           </div>
@@ -38,6 +39,7 @@ class App extends React.Component
               <Route path = "/form" component =  {formComponent}/>
               <Route path = "/to-array" component =  {ToArrayComponent}/>
               <Route path="/custom-observable" component= {CustomObservableComponent} />
+              <Route path="/map-operator" component= {MapOperatorComponent} />
               <Route render = {this.renderHome} />
            </Switch>
            </div>
