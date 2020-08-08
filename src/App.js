@@ -9,28 +9,10 @@ import ToArrayComponent from './toArrayComponent/toArray.component';
 import CustomObservableComponent from './customObservable/custom-observable.component';
 import MapOperatorComponent from './MapOperator/MapOperator.component';
 import TapOperatorComponent from './TapOperator/TapOperator.component';
+import TakeComponent from './TakeComponent/TakeComponent';
 
 class App extends React.Component
  {
-
-constructor(props){
-  //before the dom render.
-  super(props);
-  this.state = {
-   foo: 'bar',
-   bar: 'zar'
-  }
-} 
- 
-
-
-
-
-
-
-
-
-
 
    renderHome = ()  =>(
      <div className="container-fluid">
@@ -42,6 +24,7 @@ constructor(props){
                 <li> <a> <Link to="/custom-observable">Custom Observable </Link> </a> </li>
                 <li> <a className=""> <Link to="/map-operator">Map operator </Link> </a></li>
                 <li> <a className=""> <Link to="/tap-operator">Tap operator </Link> </a></li>
+                <li> <Link to="/take-operator">Take Operator </Link> </li>
               </ul>
 
           </div>
@@ -63,6 +46,7 @@ constructor(props){
               <Route path="/custom-observable" component= {CustomObservableComponent} />
               <Route path="/map-operator" component= {MapOperatorComponent} />
               <Route path="/tap-operator" component={TapOperatorComponent} />
+              <Route path="/take-operator" component={TakeComponent} />
               <Route render = {this.renderHome} />
            </Switch>
            </div>
