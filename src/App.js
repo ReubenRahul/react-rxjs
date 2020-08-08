@@ -8,9 +8,30 @@ import  formComponent from './formComponent/form.component';
 import ToArrayComponent from './toArrayComponent/toArray.component';
 import CustomObservableComponent from './customObservable/custom-observable.component';
 import MapOperatorComponent from './MapOperator/MapOperator.component';
+import TapOperatorComponent from './TapOperator/TapOperator.component';
 
 class App extends React.Component
  {
+
+constructor(props){
+  //before the dom render.
+  super(props);
+  this.state = {
+   foo: 'bar',
+   bar: 'zar'
+  }
+} 
+ 
+
+
+
+
+
+
+
+
+
+
    renderHome = ()  =>(
      <div className="container-fluid">
           <div className="row">
@@ -20,6 +41,7 @@ class App extends React.Component
                 <li> <a> <Link to="/form">From Observable </Link> </a> </li>
                 <li> <a> <Link to="/custom-observable">Custom Observable </Link> </a> </li>
                 <li> <a className=""> <Link to="/map-operator">Map operator </Link> </a></li>
+                <li> <a className=""> <Link to="/tap-operator">Tap operator </Link> </a></li>
               </ul>
 
           </div>
@@ -40,6 +62,7 @@ class App extends React.Component
               <Route path = "/to-array" component =  {ToArrayComponent}/>
               <Route path="/custom-observable" component= {CustomObservableComponent} />
               <Route path="/map-operator" component= {MapOperatorComponent} />
+              <Route path="/tap-operator" component={TapOperatorComponent} />
               <Route render = {this.renderHome} />
            </Switch>
            </div>
