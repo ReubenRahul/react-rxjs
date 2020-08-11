@@ -10,6 +10,9 @@ import CustomObservableComponent from './customObservable/custom-observable.comp
 import MapOperatorComponent from './MapOperator/MapOperator.component';
 import TapOperatorComponent from './TapOperator/TapOperator.component';
 import TakeComponent from './TakeComponent/TakeComponent';
+import RetryOperatorComponent from './RetryOperator/RetryOperator.component';
+import RetryPracticalComponent from './RetryOperator/RetryPractical.component';
+
 
 class App extends React.Component
  {
@@ -25,6 +28,8 @@ class App extends React.Component
                 <li> <a className=""> <Link to="/map-operator">Map operator </Link> </a></li>
                 <li> <a className=""> <Link to="/tap-operator">Tap operator </Link> </a></li>
                 <li> <Link to="/take-operator">Take Operator </Link> </li>
+                <li><Link to="/retry-operator"> Retry Operator </Link></li>
+                <li><Link to="/retry-practical-operator"> Retry Practical Operator </Link></li>
               </ul>
 
           </div>
@@ -47,9 +52,12 @@ class App extends React.Component
               <Route path="/map-operator" component= {MapOperatorComponent} />
               <Route path="/tap-operator" component={TapOperatorComponent} />
               <Route path="/take-operator" component={TakeComponent} />
+              <Route path="/retry-operator" component={RetryOperatorComponent} />
+              <Route path="/retry-practical-operator" component={RetryPracticalComponent} />
               <Route render = {this.renderHome} />
            </Switch>
            </div>
+           
          </div>
 
        </BrowserRouter>
