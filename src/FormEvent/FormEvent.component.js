@@ -31,15 +31,15 @@ class FormEvent extends React.Component {
   render() {
     return (
       <div className="row">
-        
+
         <div className="col-sm-3">
           <div className="card">
             <div className="card-header">
               From Event Handler on Videos
                   </div>
-              <div className="card-body">
+            <div className="card-body">
                 <button id="fromevent_handler" className="btn btn-primary btn-sm" > Click Here </button>
-              </div>
+            </div>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ class FormEvent extends React.Component {
             </div>
             <div className="card-body">
               <ul id="fromevent_result">
-              </ul> 
+              </ul>
             </div>
           </div>
         </div>

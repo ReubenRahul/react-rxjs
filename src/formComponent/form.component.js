@@ -6,23 +6,23 @@ import { print } from '../Common/Utils/Print';
  *  from -: create observable from 3 types
  * 1: array 2: iterabale(generator) 3: promise
  */
- 
+
 const FormComponent = () => {
-    
+
     const formArray$ = from([ 'React','Vue', 'Angular'] );
     useEffect( () => {
         formArray$.subscribe(obj =>  print('elContainer', obj));
         } , []);
 
     //from- promise
-    
+
     useEffect( () => {
     const promise = new Promise((resolve, reject) => {
         setTimeout(() =>  {
             resolve( ['Laravel', 'Zend','CodeIgniter', 'Symfony'] );
             reject('some error occue')
         }, 1000)
-       
+
     });
     const promise$ = from(promise);
     promise$.subscribe( data => {
@@ -30,8 +30,8 @@ console.log(data);
 print('elContainer2', data)
     }  )
 }, [])
-           
-  
+
+
 
 
     return (
