@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
+// import 'bootstrap/dist/css/bootstrap.css';
 import { Switch, Route, Redirect, BrowserRouter, Link } from 'react-router-dom';
 import FormEvent from './FormEvent/FormEvent.component';
 import ofComponent from './OfComponent/of.component';
@@ -11,6 +11,8 @@ import MapOperatorComponent from './MapOperator/MapOperator.component';
 import TapOperatorComponent from './TapOperator/TapOperator.component';
 import TakeComponent from './TakeComponent/TakeComponent';
 import ListComponent from './Hoc/List/List.component';
+import UserComponent from './User/Component/UserComponent';
+import UserStateLessComponent from './User/Component/UserStateLessComponent';
 
 class App extends React.Component
  {
@@ -27,6 +29,7 @@ class App extends React.Component
                 <li> <a className=""> <Link to="/tap-operator">Tap operator </Link> </a></li>
                 <li> <Link to="/take-operator">Take Operator </Link> </li>
                 <li> <Link to="/lists"> List </Link> </li>
+                <li> <Link to="/suspense-user"> Suspense User</Link> </li>
               </ul>
 
           </div>
@@ -37,6 +40,7 @@ class App extends React.Component
    {
 
      return(
+      //  <div> <UserStateLessComponent/></div>
        <BrowserRouter>
          <div className="App">
            <div className="container-fluid">
@@ -50,6 +54,7 @@ class App extends React.Component
               <Route path="/tap-operator" component={TapOperatorComponent} />
               <Route path="/take-operator" component={TakeComponent} />
               <Route path="/lists" component={ListComponent} />
+              <Route path="/suspense-user" component={UserComponent} />
               <Route render = {this.renderHome} />
            </Switch>
            </div>
