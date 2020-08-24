@@ -18,16 +18,80 @@ class App extends React.Component
    renderHome = ()  =>(
      <div className="container-fluid">
           <div className="row">
-              <ul className="navbar">
-                <li> <a><Link to= "/first">From (Click Handler) Event</Link> </a> </li>
-                <li> <a><Link to="/of">of Observable</Link> </a> </li>
-                <li> <a> <Link to="/form">From Observable </Link> </a> </li>
-                <li> <a> <Link to="/custom-observable">Custom Observable </Link> </a> </li>
-                <li> <a className=""> <Link to="/map-operator">Map operator </Link> </a></li>
-                <li> <a className=""> <Link to="/tap-operator">Tap operator </Link> </a></li>
-                <li> <Link to="/take-operator">Take Operator </Link> </li>
-                <li> <Link to="/lists"> List </Link> </li>
-              </ul>
+
+
+              <div className="col-sm-3">
+                <div className="card">
+                  <div className="card-header">
+                      <Link to= "/first">From (Click Handler) Event</Link>
+                    </div>
+                </div>
+              </div>
+
+
+              <div className="col-sm-3">
+                <div className="card">
+                  <div className="card-header">
+                      <Link to="/of">of Observable</Link>
+                    </div>
+                </div>
+              </div>
+
+
+              <div className="col-sm-3">
+                <div className="card">
+                  <div className="card-header">
+                     <Link to="/form">From Observable </Link>
+                    </div>
+                </div>
+              </div>
+
+
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/custom-observable">Custom Observable </Link>
+                  </div>
+              </div>
+            </div>
+
+
+          <div className="col-sm-3">
+            <div className="card">
+              <div className="card-header">
+                 <Link to="/map-operator">Map operator </Link>
+                </div>
+            </div>
+          </div>
+
+
+        <div className="col-sm-3">
+          <div className="card">
+            <div className="card-header">
+                <Link to="/tap-operator">Tap operator </Link>
+              </div>
+          </div>
+        </div>
+
+
+      <div className="col-sm-3">
+        <div className="card">
+          <div className="card-header">
+             <Link to="/take-operator">Take Operator </Link>
+            </div>
+        </div>
+      </div>
+
+
+    <div className="col-sm-3">
+      <div className="card">
+        <div className="card-header">
+           <Link to="/lists"> List </Link>
+          </div>
+      </div>
+    </div>
+
+
 
           </div>
       </div>
@@ -50,6 +114,7 @@ class App extends React.Component
               <Route path="/tap-operator" component={TapOperatorComponent} />
               <Route path="/take-operator" component={TakeComponent} />
               <Route path="/lists" component={ListComponent} />
+
               <Route render = {this.renderHome} />
            </Switch>
            </div>
