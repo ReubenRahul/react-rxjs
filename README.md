@@ -73,3 +73,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+### DistinctUntilChangedComponent
+this operator is useful when we dont change our value on input lets suppose we have type abc and we get the result but again we have added someting else and
+earse that extra character again now we will see the result back , in this distinctUntilChanged does not means that which request is one sended that will not send , instead it check if one request is done and we are adding something in that request and coming back to that again.

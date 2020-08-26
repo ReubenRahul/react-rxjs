@@ -11,7 +11,8 @@ import MapOperatorComponent from './MapOperator/MapOperator.component';
 import TapOperatorComponent from './TapOperator/TapOperator.component';
 import TakeComponent from './TakeComponent/TakeComponent';
 import ListComponent from './Hoc/List/List.component';
-
+import DebounceComponent from './DebounceComponent/Debounce.component';
+import DistinctUntilChangedComponent from './DistinctUntilChanged/DistinctUntilChanged.component'
 class App extends React.Component
  {
 
@@ -83,13 +84,31 @@ class App extends React.Component
       </div>
 
 
-    <div className="col-sm-3">
-      <div className="card">
-        <div className="card-header">
-           <Link to="/lists"> List </Link>
+          <div className="col-sm-3">
+            <div className="card">
+              <div className="card-header">
+                 <Link to="/lists"> List </Link>
+                </div>
+            </div>
           </div>
-      </div>
-    </div>
+
+
+          <div className="col-sm-3">
+            <div className="card">
+              <div className="card-header">
+                 <Link to="/debounce"> Debounce Component </Link>
+                </div>
+            </div>
+          </div>
+
+
+          <div className="col-sm-3">
+            <div className="card">
+              <div className="card-header">
+                 <Link to="/distinct-unit-changed"> Distince Until Chnaged </Link>
+                </div>
+            </div>
+          </div>
 
 
 
@@ -114,7 +133,8 @@ class App extends React.Component
               <Route path="/tap-operator" component={TapOperatorComponent} />
               <Route path="/take-operator" component={TakeComponent} />
               <Route path="/lists" component={ListComponent} />
-
+              <Route path="/debounce" component={DebounceComponent} />
+              <Route path="/distinct-unit-changed" component={DistinctUntilChangedComponent} />
               <Route render = {this.renderHome} />
            </Switch>
            </div>
