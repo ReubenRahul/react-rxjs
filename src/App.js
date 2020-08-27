@@ -13,6 +13,8 @@ import TakeComponent from './TakeComponent/TakeComponent';
 import ListComponent from './Hoc/List/List.component';
 import DebounceComponent from './DebounceComponent/Debounce.component';
 import DistinctUntilChangedComponent from './DistinctUntilChanged/DistinctUntilChanged.component'
+import LifecyleComponent from './LifecyleComponent/Lifecyle.component';
+
 class App extends React.Component
  {
 
@@ -102,13 +104,21 @@ class App extends React.Component
           </div>
 
 
-          <div className="col-sm-3">
-            <div className="card">
-              <div className="card-header">
-                 <Link to="/distinct-unit-changed"> Distince Until Chnaged </Link>
-                </div>
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/distinct-unit-changed"> Distince Until Chnaged </Link>
+                  </div>
+              </div>
             </div>
-          </div>
+
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/lifecyle"> Life Cycle </Link>
+                  </div>
+              </div>
+            </div>
 
 
 
@@ -135,6 +145,9 @@ class App extends React.Component
               <Route path="/lists" component={ListComponent} />
               <Route path="/debounce" component={DebounceComponent} />
               <Route path="/distinct-unit-changed" component={DistinctUntilChangedComponent} />
+
+              <Route path="/lifecyle" component={() => <LifecyleComponent tech="react" />} />
+
               <Route render = {this.renderHome} />
            </Switch>
            </div>
