@@ -14,7 +14,9 @@ import ListComponent from './Hoc/List/List.component';
 import DebounceComponent from './DebounceComponent/Debounce.component';
 import DistinctUntilChangedComponent from './DistinctUntilChanged/DistinctUntilChanged.component'
 import LifecyleComponent from './LifecyleComponent/Lifecyle.component';
-
+import SubjectComponent from './SubjectComponent/Subject.component';
+// import { Chat as SubjectMessagingComponent } from './Messaging/SubjectComponent/SubjectComponent';
+import  Chat from './Messaging/Chat';
 class App extends React.Component
  {
 
@@ -79,7 +81,7 @@ class App extends React.Component
 
       <div className="col-sm-3">
         <div className="card">
-          <div className="card-header">
+          <div className="card-header">SubjectComponent
              <Link to="/take-operator">Take Operator </Link>
             </div>
         </div>
@@ -120,6 +122,21 @@ class App extends React.Component
               </div>
             </div>
 
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/subject"> Subject </Link>
+                  </div>
+              </div>
+            </div>
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/subject-message"> Subject Messaging Component Chat </Link>
+                  </div>
+              </div>
+            </div>
+
 
 
           </div>
@@ -147,6 +164,8 @@ class App extends React.Component
               <Route path="/distinct-unit-changed" component={DistinctUntilChangedComponent} />
 
               <Route path="/lifecyle" component={() => <LifecyleComponent tech="react" />} />
+              <Route path="/subject" component={SubjectComponent} />
+              <Route path ="/subject-message" component = {Chat} />
 
               <Route render = {this.renderHome} />
            </Switch>
