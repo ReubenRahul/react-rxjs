@@ -17,6 +17,7 @@ import LifecyleComponent from './LifecyleComponent/Lifecyle.component';
 import SubjectComponent from './SubjectComponent/Subject.component';
 // import { Chat as SubjectMessagingComponent } from './Messaging/SubjectComponent/SubjectComponent';
 import  Chat from './Messaging/Chat';
+import ReplaySubjectComponent from './ReplaySubject/ReplaySubjectComponent';
 class App extends React.Component
  {
 
@@ -136,6 +137,13 @@ class App extends React.Component
                   </div>
               </div>
             </div>
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/replay-subject"> Replay Subject </Link>
+                  </div>
+              </div>
+            </div>
 
 
 
@@ -166,6 +174,7 @@ class App extends React.Component
               <Route path="/lifecyle" component={() => <LifecyleComponent tech="react" />} />
               <Route path="/subject" component={SubjectComponent} />
               <Route path ="/subject-message" component = {Chat} />
+              <Route path ="/replay-subject" component = {ReplaySubjectComponent} />
 
               <Route render = {this.renderHome} />
            </Switch>
