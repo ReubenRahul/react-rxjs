@@ -18,6 +18,7 @@ import SubjectComponent from './SubjectComponent/Subject.component';
 // import { Chat as SubjectMessagingComponent } from './Messaging/SubjectComponent/SubjectComponent';
 import  Chat from './Messaging/Chat';
 import ReplaySubjectComponent from './ReplaySubject/ReplaySubjectComponent';
+import ConcatComponent from './Concat/Concat';
 class App extends React.Component
  {
 
@@ -145,6 +146,14 @@ class App extends React.Component
               </div>
             </div>
 
+            <div className="col-sm-3">
+              <div className="card">
+                <div className="card-header">
+                   <Link to="/concat">Concat </Link>
+                  </div>
+              </div>
+            </div>
+
 
 
           </div>
@@ -175,6 +184,7 @@ class App extends React.Component
               <Route path="/subject" component={SubjectComponent} />
               <Route path ="/subject-message" component = {Chat} />
               <Route path ="/replay-subject" component = {ReplaySubjectComponent} />
+              <Route path ="/concat" component = {ConcatComponent} />
 
               <Route render = {this.renderHome} />
            </Switch>
